@@ -1,0 +1,205 @@
+
+/* Pengaturan dasar halaman */
+body {
+    margin: 0;
+    background-color: #f5f7fb;
+    color: #1e293b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.app-navbar {
+    background: linear-gradient(135deg, #1d4ed8, #4338ca);
+    padding: 16px 0;
+}
+
+.brand-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+    border-radius: 9px;
+    background-color: white;
+    color: #2563eb;
+}
+
+/* Bagian judul */
+.hero-section h1 {
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    letter-spacing: -1px;
+}
+
+.hero-section > p:last-child {
+    line-height: 1.7;
+}
+
+/* Kartu statistik */
+.stat-card,
+.content-card {
+    background-color: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.035);
+}
+
+.stat-label {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.stat-number {
+    margin-top: 8px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.stat-description {
+    margin-top: 4px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* Judul bagian */
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Form */
+.form-control {
+    border-color: #dbe2ea;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.12);
+}
+
+.btn {
+    border-radius: 9px;
+    font-weight: 600;
+}
+
+/* Progres tugas */
+.progress {
+    height: 9px;
+    border-radius: 20px;
+    background-color: #e8edf5;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #2563eb, #6366f1);
+}
+
+/* Daftar tugas */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #e8edf5;
+    border-radius: 12px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.task-item:hover {
+    background-color: #f8faff;
+    border-color: #cbdafc;
+}
+
+.task-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    min-width: 0;
+}
+
+.task-checkbox {
+    width: 19px;
+    height: 19px;
+    margin-top: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.task-text {
+    min-width: 0;
+}
+
+.task-title {
+    margin-bottom: 7px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.task-completed {
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+}
+
+.task-actions form {
+    margin: 0;
+}
+
+/* Tampilan ketika belum ada tugas */
+.empty-state {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.empty-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-size: 1.8rem;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 576px) {
+    .hero-section h1 {
+        letter-spacing: -0.5px;
+    }
+
+    .stat-card,
+    .content-card {
+        padding: 18px;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-actions {
+        align-self: flex-end;
+    }
+
+    .navbar-text {
+        font-size: 0.75rem !important;
+    }
+}
